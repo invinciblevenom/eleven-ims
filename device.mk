@@ -1,6 +1,6 @@
 #
-# Copyright 2020 The Android Open Source Project
-# Copyright (C) 2020 The LineageOS Project
+# Copyright 2021 The Android Open Source Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,7 +42,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
     $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
 
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.CPH1859
@@ -69,7 +68,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml
 
-
 # Misc
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/misc/factory.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/factory.ini \
@@ -92,22 +90,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GCam
 
-# FirefoxLite
-PRODUCT_PACKAGES += \
-    FirefoxLite
-
-# QKsms
-PRODUCT_PACKAGES += \
-    qksms
-
-# Removed Packages
-PRODUCT_PACKAGES += \
-    RemovePackages \
-    RemovePackages-1 \
-    RemovePackages-2 \
-    RemovePackages-3
-
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.manager-V1.0-java \
@@ -127,11 +109,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     WifiOverlay
 
-
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
-
 
 # KPOC
 PRODUCT_PACKAGES += \
@@ -167,11 +147,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
        $(LOCAL_PATH)/permissions/interfaces.xml:system/etc/permissions/interfaces.xml
 
-
 # Privapp-permissions whitelist for PhhTrebleApp
 PRODUCT_COPY_FILES += \
        $(LOCAL_PATH)/permissions/privapp-permissions-me.phh.treble.app.xml:system/etc/permissions/privapp-permissions-me.phh.treble.app.xml
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
-
