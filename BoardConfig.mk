@@ -1,6 +1,6 @@
 #
-# Copyright 2020 The Android Open Source Project
-# Copyright (C) 2020 The LineageOS Project
+# Copyright 2021 The Android Open Source Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,9 +24,6 @@ BOARD_VENDOR := oppo
 
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := CPH1859,CPH1861
-
-# system-as-root aka SAR
-# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6771
@@ -77,12 +74,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --second_offset $(BOARD_SECOND_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
-# TARGET_KERNEL_SOURCE := kernel/oppo/mt6771
-# TARGET_KERNEL_CONFIG := oppo6771_17065_defconfig
-# TARGET_KERNEL_CLANG_COMPILE := true
-# TARGET_KERNEL_CLANG_VERSION := r316199
 TARGET_BOARD_SUFFIX := _64
-
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-05-05
@@ -96,7 +88,7 @@ BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4513071104
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 55135157760
-BOARD_FLASH_BLOCK_SIZE := 131072  # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
